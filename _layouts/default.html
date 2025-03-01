@@ -1,9 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <header>
-	  
-  </header>
-  <body>
-	  
-  </body>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="{{ site.baseurl }}/">PixyzRL</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ site.baseurl }}/">ホーム</a></li>
+                    <li><a href="{{ site.baseurl }}/about">概要</a></li>
+                    <li><a href="{{ site.baseurl }}/docs">ドキュメント</a></li>
+                    <li><a href="{{ site.baseurl }}/tutorials">チュートリアル</a></li>
+                    <li><a href="{{ site.baseurl }}/contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            {{ content }}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 PixyzRL. All rights reserved.</p>
+            <p>
+                <a href="https://github.com/ItoMasaki/PixyzRL" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
 </html>
